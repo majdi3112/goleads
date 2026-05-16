@@ -41,7 +41,7 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <ul>
-            <li>België &amp; Nederland</li>
+            <li>België</li>
             <li>
               <a href="tel:+32484905341">+32 484 90 53 41</a>
             </li>
