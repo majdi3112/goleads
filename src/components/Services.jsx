@@ -6,7 +6,7 @@ const services = [
     title: "Zonnepanelen",
     text:
       "Maximaliseer uw energie-onafhankelijkheid met hoogwaardige zonnepanelen. Wij vergelijken de beste installateurs voor uw specifieke dak en budget.",
-    image: publicUrl("images/zonnepanelen-dak.png")
+    image: publicUrl("images/zonnepanelen-inspectie.png")
   },
   {
     title: "Warmtepompen",
@@ -30,19 +30,19 @@ const services = [
     title: "Bouwwerk aan huis",
     text:
       "Van dakwerken tot renovatie: wij koppelen u aan betrouwbare aannemers voor professioneel bouwwerk aan uw woning.",
-    image: publicUrl("images/dakwerken.png")
+    image: publicUrl("images/bouw-werk-dak.png")
   },
   {
     title: "Dakrenovatie",
     text:
       "Werk samen met gecontroleerde vakmensen voor een sterk en duurzaam resultaat. Onafhankelijk advies voor uw dakproject.",
-    image: publicUrl("images/dakrenovatie.png")
+    image: publicUrl("images/dakwerk.png")
   },
   {
     title: "Woningverbeteringen",
     text:
       "Van isolatie tot algemene renovaties: wij helpen u kiezen tussen de beste partners voor uw project.",
-    image: publicUrl("images/thuisrenovatie.png")
+    image: publicUrl("images/bouw-werk-planning.png")
   }
 ];
 
