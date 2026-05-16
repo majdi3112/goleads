@@ -6,13 +6,13 @@ const services = [
     title: "Zonnepanelen",
     text:
       "Maximaliseer uw energie-onafhankelijkheid met hoogwaardige zonnepanelen. Wij vergelijken de beste installateurs voor uw specifieke dak en budget.",
-    image: publicUrl("images/zonnepanelen-inspectie.png")
+    image: publicUrl("images/zonnepanelen-dak.png")
   },
   {
     title: "Warmtepompen",
     text:
       "Verwarm uw woning duurzaam en bespaar fors op uw gasrekening. Ontdek welke warmtepompoplossing het meest efficiënt is voor uw woonsituatie.",
-    image: publicUrl("images/warmtepomp.png")
+    image: publicUrl("images/warmtepomp-nieuw.png")
   },
   {
     title: "Laadpalen",
@@ -24,25 +24,25 @@ const services = [
     title: "Thuisbatterij",
     text:
       "Bewaar uw zonne-energie voor later en verlaag uw piekverbruik. Wij vergelijken thuisbatterijen die passen bij uw installatie en verbruik.",
-    image: publicUrl("images/woning-duurzaam.png")
+    image: publicUrl("images/thuisbaterij.png")
   },
   {
     title: "Bouwwerk aan huis",
     text:
       "Van dakwerken tot renovatie: wij koppelen u aan betrouwbare aannemers voor professioneel bouwwerk aan uw woning.",
-    image: publicUrl("images/bouw-werk-dak.png")
+    image: publicUrl("images/dakwerken.png")
   },
   {
     title: "Dakrenovatie",
     text:
       "Werk samen met gecontroleerde vakmensen voor een sterk en duurzaam resultaat. Onafhankelijk advies voor uw dakproject.",
-    image: publicUrl("images/zonnepanelen-dak.png")
+    image: publicUrl("images/dakrenovatie.png")
   },
   {
     title: "Woningverbeteringen",
     text:
       "Van isolatie tot algemene renovaties: wij helpen u kiezen tussen de beste partners voor uw project.",
-    image: publicUrl("images/bouw-werk-planning.png")
+    image: publicUrl("images/thuisrenovatie.png")
   }
 ];
 
