@@ -31,8 +31,8 @@ export default function Process() {
           <span className="kicker">Onze werkwijze</span>
           <h2>De Weg naar Besparing</h2>
           <p>
-            Van zonnepanelen tot warmtepompen: wij begeleiden u van A tot Z naar een duurzamere woning
-            met de beste leveranciers van Belgie.
+            Van zonnepanelen en thuisbatterijen tot warmtepompen en bouwwerk aan huis: wij begeleiden u van A tot Z
+            naar een duurzamere woning met de beste leveranciers van België.
           </p>
         </Reveal>
 

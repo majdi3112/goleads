@@ -106,6 +106,8 @@ export default function Contact() {
                   <option>Zonnepanelen</option>
                   <option>Laadpalen</option>
                   <option>Warmtepompen</option>
+                  <option>Thuisbatterij</option>
+                  <option>Bouwwerk aan huis</option>
                   <option>Dakrenovatie</option>
                   <option>Woningverbeteringen</option>
                 </select>

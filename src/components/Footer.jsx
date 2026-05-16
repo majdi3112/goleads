@@ -20,8 +20,10 @@ export default function Footer() {
           <h4>Onze diensten</h4>
           <ul>
             <li>Zonnepanelen vergelijken</li>
+            <li>Thuisbatterij advies</li>
             <li>Laadpalen installatie</li>
             <li>Warmtepomp advies</li>
+            <li>Bouwwerk aan huis</li>
             <li>Dakrenovatie partners</li>
           </ul>
         </div>

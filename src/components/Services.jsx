@@ -1,40 +1,48 @@
 import Reveal from "./Reveal.jsx";
+import { publicUrl } from "../lib/publicUrl.js";
 
 const services = [
   {
     title: "Zonnepanelen",
     text:
       "Maximaliseer uw energie-onafhankelijkheid met hoogwaardige zonnepanelen. Wij vergelijken de beste installateurs voor uw specifieke dak en budget.",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+    image: publicUrl("images/zonnepanelen-inspectie.png")
   },
   {
     title: "Warmtepompen",
     text:
       "Verwarm uw woning duurzaam en bespaar fors op uw gasrekening. Ontdek welke warmtepompoplossing het meest efficiënt is voor uw woonsituatie.",
-    image:
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
+    image: publicUrl("images/warmtepomp.png")
   },
   {
     title: "Laadpalen",
     text:
       "Klaar voor elektrisch rijden? Wij helpen u bij het kiezen van de juiste laadpaal voor thuis, inclusief professionele installatie en slimme sturing.",
-    image:
-      "https://images.pexels.com/photos/9800010/pexels-photo-9800010.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    image: publicUrl("images/laadpaal-modern.png")
+  },
+  {
+    title: "Thuisbatterij",
+    text:
+      "Bewaar uw zonne-energie voor later en verlaag uw piekverbruik. Wij vergelijken thuisbatterijen die passen bij uw installatie en verbruik.",
+    image: publicUrl("images/woning-duurzaam.png")
+  },
+  {
+    title: "Bouwwerk aan huis",
+    text:
+      "Van dakwerken tot renovatie: wij koppelen u aan betrouwbare aannemers voor professioneel bouwwerk aan uw woning.",
+    image: publicUrl("images/bouw-werk-dak.png")
   },
   {
     title: "Dakrenovatie",
     text:
       "Werk samen met gecontroleerde vakmensen voor een sterk en duurzaam resultaat. Onafhankelijk advies voor uw dakproject.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    image: publicUrl("images/zonnepanelen-dak.png")
   },
   {
     title: "Woningverbeteringen",
     text:
       "Van isolatie tot algemene renovaties: wij helpen u kiezen tussen de beste partners voor uw project.",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+    image: publicUrl("images/bouw-werk-planning.png")
   }
 ];
 

@@ -1,4 +1,5 @@
 import Reveal from "./Reveal.jsx";
+import { publicUrl } from "../lib/publicUrl.js";
 
 export default function Hero() {
   return (
@@ -21,7 +22,8 @@ export default function Hero() {
           </h1>
           <p>
             Wij begeleiden u van A tot Z bij het kiezen van de juiste leverancier voor zonnepanelen,
-            warmtepompen, laadpalen en renovaties. Onafhankelijk advies voor een toekomstbestendige woning.
+            thuisbatterijen, warmtepompen, laadpalen, bouwwerk aan huis en renovaties. Onafhankelijk advies
+            voor een toekomstbestendige woning.
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#contact">Vraag gratis advies aan</a>
@@ -47,8 +49,8 @@ export default function Hero() {
         <Reveal delay={150} className="hero-visual">
           <div className="hero-image-card">
             <img
-              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
-              alt="Zonnepanelen op een woning"
+              src={publicUrl("images/team-solar.png")}
+              alt="Professioneel team bij zonnepanelen"
             />
             <div className="hero-image-tag">
               <span className="tag-icon">⚡</span>
