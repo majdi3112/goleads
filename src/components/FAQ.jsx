@@ -8,11 +8,11 @@ const faqs = [
   },
   {
     q: "Werken jullie met gecontroleerde partners?",
-    a: "Wij brengen u alleen in contact met betrouwbare en gecontroleerde leveranciers in België en Nederland."
+    a: "Wij brengen u alleen in contact met betrouwbare en gecontroleerde leveranciers in België."
   },
   {
     q: "Welke regio bedienen jullie?",
-    a: "Wij zijn actief in heel België en Nederland, met een sterk netwerk van lokale installateurs."
+    a: "Wij zijn actief in heel België. Met een sterk netwerk van lokale installateurs."
   },
   {
     q: "Hoe snel ontvang ik een reactie?",
