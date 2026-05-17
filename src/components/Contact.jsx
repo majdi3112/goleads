@@ -55,7 +55,7 @@ export default function Contact() {
               <span className="contact-icon">📍</span>
               <div>
                 <small>Regio</small>
-                <span>België &amp; Nederland</span>
+                <span>België</span>
               </div>
             </li>
           </ul>
