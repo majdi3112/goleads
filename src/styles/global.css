@@ -277,6 +277,14 @@ img {
   position: relative;
 }
 
+.hero-logo {
+  display: block;
+  max-width: min(300px, 92vw);
+  height: auto;
+  margin: 0 0 1.15rem;
+  object-fit: contain;
+}
+
 .hero-copy h1 {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.05;

@@ -12,6 +12,11 @@ export default function Hero() {
 
       <div className="container hero-grid">
         <Reveal className="hero-copy">
+          <img
+            className="hero-logo"
+            src={publicUrl("images/goleads-logo-hero.png")}
+            alt="GoLeads"
+          />
           <span className="eyebrow">
             <span className="dot" />
             Uw partner in verduurzaming
@@ -47,10 +52,10 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={150} className="hero-visual">
-          <div className="hero-image-card hero-image-card--brand">
+          <div className="hero-image-card">
             <img
-              src={publicUrl("images/hero-section.png")}
-              alt="GoLeads – uw partner in verduurzaming"
+              src={publicUrl("images/woning-duurzaam.png")}
+              alt="Duurzame woning met zonnepanelen en laadpaal"
             />
           </div>
 
