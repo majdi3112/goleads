@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Reveal from "./Reveal.jsx";
 
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -9,20 +11,62 @@ export default function Contact() {
     service: "",
     message: ""
   });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState("idle");
+  const [feedback, setFeedback] = useState("");
+
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
   function update(e) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   }
 
-  function submit(e) {
+  async function submit(e) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Aanvraag advies - ${form.service || "GoLeads"}`);
-    const body = encodeURIComponent(
-      `Naam: ${form.name}\nE-mail: ${form.email}\nTelefoon: ${form.phone}\nInteresse: ${form.service}\n\nBericht:\n${form.message}`
-    );
-    window.location.href = `mailto:info@goleads.be?subject=${subject}&body=${body}`;
-    setSent(true);
+    setFeedback("");
+
+    if (!accessKey) {
+      setStatus("error");
+      setFeedback(
+        "E-mailverzending is nog niet geconfigureerd. Voeg VITE_WEB3FORMS_ACCESS_KEY toe (zie README)."
+      );
+      return;
+    }
+
+    setStatus("loading");
+
+    try {
+      const res = await fetch(WEB3FORMS_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `GoLeads aanvraag – ${form.service}`,
+          from_name: form.name,
+          email: form.email,
+          replyto: form.email,
+          message: [
+            `Dienst: ${form.service}`,
+            `Telefoon: ${form.phone || "—"}`,
+            "",
+            form.message
+          ].join("\n")
+        })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (data.success) {
+        setStatus("success");
+        setFeedback("Bedankt! Uw aanvraag is verstuurd. We nemen zo snel mogelijk contact met u op.");
+        setForm({ name: "", email: "", phone: "", service: "", message: "" });
+      } else {
+        setStatus("error");
+        setFeedback(data.message || "Verzenden mislukt. Probeer later opnieuw of bel ons.");
+      }
+    } catch {
+      setStatus("error");
+      setFeedback("Netwerkfout. Controleer uw verbinding en probeer opnieuw.");
+    }
   }
 
   return (
@@ -51,13 +95,6 @@ export default function Contact() {
                 <a href="tel:+32484905341">+32 484 90 53 41</a>
               </div>
             </li>
-            <li>
-              <span className="contact-icon">📍</span>
-              <div>
-                <small>Regio</small>
-                <span>België</span>
-              </div>
-            </li>
           </ul>
         </Reveal>
 
@@ -73,6 +110,7 @@ export default function Contact() {
                   onChange={update}
                   placeholder="Voornaam Achternaam"
                   required
+                  disabled={status === "loading"}
                 />
               </label>
               <label>
@@ -82,8 +120,9 @@ export default function Contact() {
                   name="email"
                   value={form.email}
                   onChange={update}
-                  placeholder="naam@email.be"
+                  placeholder="naam@voorbeeld.be"
                   required
+                  disabled={status === "loading"}
                 />
               </label>
             </div>
@@ -97,11 +136,12 @@ export default function Contact() {
                   value={form.phone}
                   onChange={update}
                   placeholder="+32 ..."
+                  disabled={status === "loading"}
                 />
               </label>
               <label>
                 <span>Interesse in</span>
-                <select name="service" value={form.service} onChange={update} required>
+                <select name="service" value={form.service} onChange={update} required disabled={status === "loading"}>
                   <option value="">Kies een dienst</option>
                   <option>Zonnepanelen</option>
                   <option>Laadpalen</option>
@@ -123,15 +163,18 @@ export default function Contact() {
                 onChange={update}
                 placeholder="Vertel kort wat u wenst te realiseren"
                 required
+                disabled={status === "loading"}
               />
             </label>
 
-            <button type="submit" className="btn btn-primary btn-block">
-              Vraag gratis advies aan
+            <button type="submit" className="btn btn-primary btn-block" disabled={status === "loading"}>
+              {status === "loading" ? "Bezig met verzenden…" : "Vraag gratis advies aan"}
             </button>
 
-            {sent && (
-              <p className="form-success">Uw mailapp wordt geopend om de aanvraag te versturen.</p>
+            {feedback && (
+              <p className={status === "success" ? "form-success" : "form-error"} role="status">
+                {feedback}
+              </p>
             )}
           </form>
         </Reveal>
