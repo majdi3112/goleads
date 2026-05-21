@@ -47,17 +47,35 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={150} className="hero-visual">
-          <div className="hero-image-card">
+          <div className="hero-image-card hero-image-card--brand">
             <img
-              src={publicUrl("images/team-solar.png")}
-              alt="Professioneel team bij zonnepanelen"
+              src={publicUrl("images/hero-section.png")}
+              alt="GoLeads – uw partner in verduurzaming"
             />
-           
           </div>
 
-            
-           
-    
+          <div className="hero-floating" role="note" aria-label="Resultaten en tevredenheid">
+            <div className="hf-block">
+              <div className="hf-row">
+                <div className="hf-avatar" aria-hidden="true" />
+                <div className="hf-text">
+                  <strong>4.9 / 5</strong>
+                  <small>Tevreden klanten</small>
+                </div>
+              </div>
+              <div className="hf-bar" aria-hidden="true">
+                <span style={{ width: "98%" }} />
+              </div>
+            </div>
+
+            <div className="hf-divider" aria-hidden="true" />
+
+            <div className="hf-block hf-savings">
+              <span className="hf-label" aria-hidden="true">Besparing</span>
+              <strong>Tot 60% besparing</strong>
+              <small>op uw energiefactuur</small>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
