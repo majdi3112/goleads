@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { publicUrl } from "../lib/publicUrl.js";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,11 +19,8 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container header-inner">
-        <a className="brand" href="#top" onClick={close}>
-          <span className="brand-mark">G</span>
-          <span>
-            <strong>GoLeads</strong>
-          </span>
+        <a className="brand brand-logo" href="#top" onClick={close} aria-label="GoLeads – naar start">
+          <img src={publicUrl("logo-navbar.png")} alt="" width="200" height="42" decoding="async" />
         </a>
 
         <nav className={`nav ${open ? "is-open" : ""}`}>

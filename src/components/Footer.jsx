@@ -1,14 +1,13 @@
+import { publicUrl } from "../lib/publicUrl.js";
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <a className="brand" href="#top">
-            <span className="brand-mark">G</span>
-            <span>
-              <strong>GoLeads</strong>
-            </span>
+          <a className="brand footer-brand-logo" href="#top" aria-label="GoLeads – naar start">
+            <img src={publicUrl("logo-navbar.png")} alt="" width="200" height="36" decoding="async" />
           </a>
           <p className="footer-text">
             Wij helpen u bij het kiezen van de juiste leverancier voor woningverbetering en

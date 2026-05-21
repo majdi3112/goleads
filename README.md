@@ -8,7 +8,7 @@ Built with **Vite + React**.
 
 ```bash
 npm install   # install dependencies
-npm run dev   # start dev server
+npm run dev   # start dev server — open http://localhost:5173/goleads/
 npm run build # production build (dist/)
 npm run preview
 ```
@@ -19,8 +19,6 @@ Pushes to `main` are automatically deployed to GitHub Pages via the workflow in
 `.github/workflows/deploy.yml`.
 
 Live: https://majdi3112.github.io/goleads/
-
-De build gebruikt een **relatieve base** (`./`), zodat CSS/JS altijd onder hetzelfde pad als `index.html` worden geladen (geen 404 door verkeerde `/goleads/`-prefix). Na een nieuwe deploy: **Ctrl+F5** om oude `index.html` uit de cache te vermijden.
 
 ### Contactformulier (e-mail rechtstreeks naar info@goleads.be)
 
