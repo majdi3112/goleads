@@ -20,6 +20,8 @@ Pushes to `main` are automatically deployed to GitHub Pages via the workflow in
 
 Live: https://majdi3112.github.io/goleads/
 
+De build gebruikt een **relatieve base** (`./`), zodat CSS/JS altijd onder hetzelfde pad als `index.html` worden geladen (geen 404 door verkeerde `/goleads/`-prefix). Na een nieuwe deploy: **Ctrl+F5** om oude `index.html` uit de cache te vermijden.
+
 ### Contactformulier (e-mail rechtstreeks naar info@goleads.be)
 
 Een statische website kan zelf geen SMTP-mail versturen. Daarom gebruikt het formulier **[Web3Forms](https://web3forms.com)** (gratis tier): bij verzenden gaat er een beveiligde POST naar hun server en **zij bezorgen de mail bij info@goleads.be**.
