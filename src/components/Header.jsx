@@ -20,7 +20,7 @@ export default function Header() {
     <header className={`header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container header-inner">
         <a className="brand brand-logo" href="#top" onClick={close} aria-label="GoLeads – naar start">
-          <img src={publicUrl("logo-navbar.png")} alt="" width="200" height="42" decoding="async" />
+          <img src={publicUrl("logo-navbar.png")} alt="" width="500" height="42" decoding="async" />
         </a>
 
         <nav className={`nav ${open ? "is-open" : ""}`}>
