@@ -31,3 +31,13 @@ Een statische website kan zelf geen SMTP-mail versturen. Daarom gebruikt het for
 3. Push een commit naar `main` of start de workflow handmatig (**Actions → Deploy site to GitHub Pages → Run workflow**), zodat `npm run build` de key meeneemt.
 
 Lokaal: kopieer `.env.example` naar `.env` en vul `VITE_WEB3FORMS_ACCESS_KEY=` in.
+
+### Controleren of de key actief is
+
+| Waar | Wat je moet zien |
+|------|-------------------|
+| **GitHub** → *Settings* → *Secrets and variables* → *Actions* | Een secret met exacte naam **`VITE_WEB3FORMS_ACCESS_KEY`** (hoofdletters, underscores zoals hier). |
+| **GitHub** → *Actions* → laatste *Deploy site to GitHub Pages* → stap *Check Web3Forms secret* | Groene **notice** = key gezet; gele **warning** = key ontbreekt → secret toevoegen en workflow **opnieuw** draaien. |
+| **Live site** | Geen melding meer *"E-mailverzending is nog niet geconfigureerd"* bij verzenden formulier. |
+
+**Veelvoorkomende fout:** alleen in `.env` op je pc zetten helpt **niet** voor GitHub Pages: daar moet het **repository secret** staan, daarna opnieuw builden/deployen.

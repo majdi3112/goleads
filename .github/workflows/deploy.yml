@@ -30,6 +30,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check Web3Forms secret (contactformulier)
+        env:
+          VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
+        run: |
+          if [ -z "$VITE_WEB3FORMS_ACCESS_KEY" ]; then
+            echo "::warning::VITE_WEB3FORMS_ACCESS_KEY ontbreekt. Voeg toe onder Settings → Secrets and variables → Actions, daarna workflow opnieuw draaien."
+          else
+            echo "::notice::VITE_WEB3FORMS_ACCESS_KEY is gezet; build bevat e-mailconfiguratie."
+          fi
+
       - name: Build
         env:
           VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
